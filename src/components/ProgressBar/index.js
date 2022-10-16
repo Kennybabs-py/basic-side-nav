@@ -10,6 +10,7 @@ const stepsStyles = {
 
 const itemStyles = {
   height: "100px",
+  border: "1px solid black",
 };
 
 export default function ProgressBar(props) {
@@ -29,13 +30,13 @@ export default function ProgressBar(props) {
         <Steps.Item
           style={itemStyles}
           title="Waiting"
-          icon={step > 1 && <WechatIcon />}
+          icon={step > 2 && <WechatIcon />}
         />
 
         <Steps.Item
           style={itemStyles}
           title="Waiting"
-          icon={step > 1 && <WechatIcon />}
+          icon={step > 3 && <WechatIcon />}
         />
       </Steps>
     </div>

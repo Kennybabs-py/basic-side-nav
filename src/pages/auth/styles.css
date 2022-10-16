@@ -3,3 +3,12 @@
   border: 1px solid black;
   height: 100vh;
 }
+
+.auth button {
+  border-radius: 8px;
+  padding: 1rem 3rem;
+  background-color: rgb(10, 70, 90);
+  color: white;
+  font-weight: 700;
+  margin-top: 2rem;
+}
