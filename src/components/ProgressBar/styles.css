@@ -1,8 +1,16 @@
 .progressbar {
-  border: 1px solid black;
   width: 60%;
   padding: 2rem 0;
   margin: auto;
   display: grid;
   place-items: center;
+}
+
+.steps-item {
+  /* overflow-x: visible; */
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }

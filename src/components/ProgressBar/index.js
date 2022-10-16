@@ -1,16 +1,15 @@
 import "./styles.css";
 import "rsuite/dist/rsuite.min.css";
 import { Steps } from "rsuite";
-import WechatIcon from "@rsuite/icons/Wechat";
 
 const stepsStyles = {
   display: "inline-table",
   verticalAlign: "top",
+  color: "green",
 };
 
 const itemStyles = {
-  height: "100px",
-  border: "1px solid black",
+  height: "80px",
 };
 
 export default function ProgressBar(props) {
@@ -19,25 +18,13 @@ export default function ProgressBar(props) {
   return (
     <div className="progressbar">
       <Steps current={step} vertical style={stepsStyles}>
-        <Steps.Item style={itemStyles} title="Finished" icon={<WechatIcon />} />
+        <Steps.Item style={itemStyles} title="Create an Account" />
 
-        <Steps.Item
-          style={itemStyles}
-          title="In progress"
-          icon={step > 1 && <WechatIcon />}
-        />
+        <Steps.Item style={itemStyles} title="In progress" />
 
-        <Steps.Item
-          style={itemStyles}
-          title="Waiting"
-          icon={step > 2 && <WechatIcon />}
-        />
+        <Steps.Item style={itemStyles} title="Waiting" />
 
-        <Steps.Item
-          style={itemStyles}
-          title="Waiting"
-          icon={step > 3 && <WechatIcon />}
-        />
+        <Steps.Item style={itemStyles} title="Waiting" />
       </Steps>
     </div>
   );
