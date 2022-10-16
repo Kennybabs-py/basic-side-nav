@@ -1,8 +1,7 @@
 import "./styles.css";
 import "rsuite/dist/rsuite.min.css";
-import { Progress, Steps } from "rsuite";
+import { Steps } from "rsuite";
 import WechatIcon from "@rsuite/icons/Wechat";
-import { isVisible } from "@testing-library/user-event/dist/utils";
 
 const stepsStyles = {
   display: "inline-table",
