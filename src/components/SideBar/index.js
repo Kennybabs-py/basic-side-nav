@@ -6,10 +6,10 @@ export default function SideBar() {
   return (
     <div className="sidebar">
       <h1>SIDEBAR</h1>
-      <Link to="/onboard">Sign up</Link>
+      <Link to="/">Sign up</Link>
       <br />
 
-      <Link to="/onboard/auth">Auth</Link>
+      <Link to="/auth">Auth</Link>
     </div>
   );
 }

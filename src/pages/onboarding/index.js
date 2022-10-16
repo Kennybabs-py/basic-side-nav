@@ -6,9 +6,13 @@ import "./styles.css";
 export default function Onboarding() {
   return (
     <div className="onboard">
-      <SideBar />
+      <div className="nav">
+        <SideBar />
+      </div>
 
-      <Outlet />
+      <div className="content">
+        <Outlet />
+      </div>
     </div>
   );
 }
