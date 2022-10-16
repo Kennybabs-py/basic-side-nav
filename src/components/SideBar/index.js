@@ -1,8 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
+import ProgressBar from "../ProgressBar";
 
-export default function SideBar() {
+export default function SideBar({ step }) {
   return (
     <div className="sidebar">
       <h1>SIDEBAR</h1>
@@ -10,6 +10,8 @@ export default function SideBar() {
       <br />
 
       <Link to="/auth">Auth</Link>
+
+      <ProgressBar step={step} />
     </div>
   );
 }
