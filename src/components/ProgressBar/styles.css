@@ -1,16 +1,28 @@
 .progressbar {
   width: 60%;
-  padding: 2rem 0;
   margin: auto;
-  display: grid;
-  place-items: center;
 }
 
-.steps-item {
-  /* overflow-x: visible; */
+.progressbar {
   border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  padding: 60px 0;
+  z-index: 3;
+}
+
+.image {
+  margin: 0 auto;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: red;
+  transition: 0.3s ease-in-out;
+}
+
+.line {
+  margin: 0 auto;
+  width: 3px;
+  height: 46px;
+  border-radius: 2px;
+  background-color: #e9d7fe;
+  transition: 0.3s ease-in-out;
 }

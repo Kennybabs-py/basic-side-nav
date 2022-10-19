@@ -1,31 +1,38 @@
 import "./styles.css";
-import "rsuite/dist/rsuite.min.css";
-import { Steps } from "rsuite";
 
-const stepsStyles = {
-  display: "inline-table",
-  verticalAlign: "top",
-  color: "green",
-};
-
-const itemStyles = {
-  height: "80px",
-};
+const progressData = [
+  { id: 0, image: "activeIcon", status: "active" },
+  { id: 1, image: "activeIcon", status: "active" },
+  { id: 2, image: "activeIcon", status: "active" },
+  { id: 3, image: "activeIcon", status: "active" },
+];
 
 export default function ProgressBar(props) {
   const { step } = props;
 
   return (
     <div className="progressbar">
-      <Steps current={step} vertical style={stepsStyles}>
-        <Steps.Item style={itemStyles} title="Create an Account" />
-
-        <Steps.Item style={itemStyles} title="In progress" />
-
-        <Steps.Item style={itemStyles} title="Waiting" />
-
-        <Steps.Item style={itemStyles} title="Waiting" />
-      </Steps>
+      {progressData.map((item) => {
+        return (
+          <div key={item.id} className="progress-step">
+            {/* image */}
+            <div
+              className="image"
+              style={{
+                backgroundColor:
+                  step === item.id ? "blue" : step > item.id ? "green" : "red",
+                scale: step === item.id && "1.06",
+                zIndex: step === item.id && "5",
+              }}
+            ></div>
+            {/* line */}
+            <div
+              className="line"
+              style={{ display: item.id === 3 ? "none" : "" }}
+            ></div>
+          </div>
+        );
+      })}
     </div>
   );
 }
